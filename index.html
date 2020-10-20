@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css\reset.css">
+  <link rel="stylesheet" type="text/css" href="css\styles.css">
+  </link>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="background">
+    <div class="container" id="main-container">
+      <div class="left-side">
+        <div class="mobile">
+          <img class="woman" src="images\illustration-woman-online-mobile.svg" />
+          <img class="mobile-shadow" src="images\bg-pattern-mobile.svg" />
+        </div>
+        <div class="desktop">
+
+          <div class="images">
+            <img class="woman" src="images\illustration-woman-online-desktop.svg" />
+            <img class="desktop-shadow" src="images\bg-pattern-desktop.svg" />
+          </div>
+          <img class="box" src="images\illustration-box-desktop.svg" />
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="container">
+          <div class="header">
+            <h2>FAQ<h2>
+          </div>
+
+          <ul class="questions">
+            <li class="question">
+              <div class="content">
+                <p>How Many team members can I invite?</p>
+                <img class="arrow" src="images\icon-arrow-down.svg" />
+              </div>
+              <div class="dropdown">
+                <p>Currently, this app offers 8 members at this time.</p>
+              </div>
+            </li>
+            <hr>
+            <li class="question">
+              <div class="content">
+                <p class="contentChild">What is the maximum file upload size?</p>
+                <img class="arrow" src="images\icon-arrow-down.svg" />
+              </div>
+              <div class="dropdown">
+                <p>No more than 2 GB. All files in your account must fit in your alloted storage space.</p>
+              </div>
+            </li>
+            <hr>
+            <li class="question">
+              <div class="content">
+                <p class="contentChild">How do I reset my password?</p>
+                <img class="arrow contentChild" src="images\icon-arrow-down.svg" />
+              </div>
+              <div class="dropdown">
+                <p>Click the forgot my password link in the sign in page.</p>
+              </div>
+            </li>
+            <hr>
+            <li class="question">
+              <div class="content">
+                <p class="contentChild">Can I cancel my subscription?</p>
+                <img class="arrow contentChild" src="images\icon-arrow-down.svg" />
+              </div>
+              <div class="dropdown">
+                <p>In the settings, there is an option to look at your account. Just click cancel subscription.</p>
+              </div>
+            </li>
+            <hr>
+            <li class="question">
+              <div class="content">
+                <p class="contentChild">Do you provide any additional support?</p>
+                <img class="arrow contentChild" src="images\icon-arrow-down.svg" />
+              </div>
+              <div class="dropdown">
+                <p>Yes, just email at gamyburgos@gmail.com.</p>
+              </div>
+            </li>
+            <hr>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    const queston = document.querySelectorAll(".question");
+
+
+
+    queston.forEach(element => {
+      element.addEventListener("click", e => {
+        element.classList.toggle("active");
+      })
+    });;
+  </script>
+</body>
+
+</html>

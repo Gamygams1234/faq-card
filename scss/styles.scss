@@ -1,0 +1,206 @@
+#main-container {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.background {
+  .box {
+    display: none;
+  }
+  min-height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  justify-content: center;
+
+  .container {
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin-bottom: 1em;
+    margin-top: 12em;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-grow: 1;
+    padding-bottom: 1em;
+
+    .left-side {
+      display: flex;
+      justify-content: center;
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .woman {
+          position: relative;
+          bottom: 3.5em;
+          right: 0.7em;
+          z-index: 2;
+        }
+        .mobile-shadow {
+          position: relative;
+          z-index: 1;
+          bottom: 10em;
+        }
+      }
+    }
+
+    .right-side {
+      .container {
+        margin: auto 30px;
+        .header {
+          display: flex;
+          justify-content: center;
+          h2 {
+            font-weight: 700;
+            font-size: 3em;
+          }
+          padding-bottom: 4em;
+        }
+        .questions {
+          .question {
+            cursor: pointer;
+
+            .content {
+              transition: all 0.2s ease-in-out;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0.5em 0 0.5em 0;
+              p {
+                color: hsl(237, 12%, 33%);
+                width: 81%;
+              }
+
+              .arrow {
+                transition: all 0.2s ease-in-out;
+                margin-top: auto;
+                margin-top: auto;
+                width: 20px;
+              }
+            }
+            .content:hover {
+              p {
+                font-weight: 700;
+                color: hsl(14, 88%, 65%);
+              }
+            }
+            .dropdown {
+              p {
+                display: none;
+                padding: 10px 0 10px 0;
+                color: hsl(240, 6%, 50%);
+              }
+            }
+          }
+          .active {
+            .content {
+              padding: 0.5em 0 0.5em 0;
+              p {
+                transition: all 0.1s ease-in-out;
+                font-weight: 700;
+              }
+              .arrow {
+                transition: all 0.1s ease-in-out;
+                transform: rotate(180deg);
+              }
+            }
+            .dropdown {
+              p {
+                transition: all 0.3s ease-in-out;
+                display: block;
+                padding: 10px 0 10px 0;
+                color: hsl(240, 6%, 50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .background {
+    #main-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      max-width: 1200px;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 4em;
+      margin-bottom: 4em;
+
+      .left-side {
+        width: 45%;
+        justify-content: flex-start;
+
+        .mobile {
+          display: none;
+        }
+        .desktop {
+          display: flex;
+          flex-direction: column;
+
+          .images {
+            display: grid;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            height: 100%;
+            .woman {
+              position: relative;
+              z-index: 4;
+              width: 100%;
+              align-self: center;
+              justify-self: center;
+              grid-row-start: 1;
+              grid-row-end: 2;
+              grid-column-start: 1;
+              grid-column-end: 2;
+              right: 16%;
+            }
+            .desktop-shadow {
+              align-self: center;
+              position: relative;
+              grid-row-start: 1;
+              grid-row-end: 2;
+              grid-column-start: 1;
+              grid-column-end: 2;
+              right: 15%;
+              width: 100%;
+            }
+          }
+          .box {
+            position: relative;
+            display: block;
+            justify-self: center;
+            width: 30%;
+            bottom: 50%;
+            left: -17%;
+            z-index: 4;
+          }
+        }
+      }
+      .right-side {
+        margin: auto;
+        width: 45%;
+        padding-bottom: 2em;
+        padding-top: 2em;
+        .header {
+          display: flex;
+          justify-content: flex-start;
+          padding-bottom: 2em;
+          h2 {
+            font-weight: 700;
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+}

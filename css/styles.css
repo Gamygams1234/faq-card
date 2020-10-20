@@ -1,0 +1,184 @@
+#main-container {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.background {
+  min-height: 100vh;
+  background: linear-gradient(#af67e9, #6565e7);
+  display: flex;
+  justify-content: center;
+}
+.background .box {
+  display: none;
+}
+.background .container {
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin-bottom: 1em;
+  margin-top: 12em;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-grow: 1;
+  padding-bottom: 1em;
+}
+.background .container .left-side {
+  display: flex;
+  justify-content: center;
+}
+.background .container .left-side .desktop {
+  display: none;
+}
+.background .container .left-side .mobile {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.background .container .left-side .mobile .woman {
+  position: relative;
+  bottom: 3.5em;
+  right: 0.7em;
+  z-index: 2;
+}
+.background .container .left-side .mobile .mobile-shadow {
+  position: relative;
+  z-index: 1;
+  bottom: 10em;
+}
+.background .container .right-side .container {
+  margin: auto 30px;
+}
+.background .container .right-side .container .header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+}
+.background .container .right-side .container .header h2 {
+  font-weight: 700;
+  font-size: 3em;
+}
+.background .container .right-side .container .questions .question {
+  cursor: pointer;
+}
+.background .container .right-side .container .questions .question .content {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 0 0.5em 0;
+}
+.background .container .right-side .container .questions .question .content p {
+  color: #4a4b5e;
+  width: 81%;
+}
+.background .container .right-side .container .questions .question .content .arrow {
+  transition: all 0.2s ease-in-out;
+  margin-top: auto;
+  margin-top: auto;
+  width: 20px;
+}
+.background .container .right-side .container .questions .question .content:hover p {
+  font-weight: 700;
+  color: #f47c57;
+}
+.background .container .right-side .container .questions .question .dropdown p {
+  display: none;
+  padding: 10px 0 10px 0;
+  color: #787887;
+}
+.background .container .right-side .container .questions .active .content {
+  padding: 0.5em 0 0.5em 0;
+}
+.background .container .right-side .container .questions .active .content p {
+  transition: all 0.1s ease-in-out;
+  font-weight: 700;
+}
+.background .container .right-side .container .questions .active .content .arrow {
+  transition: all 0.1s ease-in-out;
+  transform: rotate(180deg);
+}
+.background .container .right-side .container .questions .active .dropdown p {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  padding: 10px 0 10px 0;
+  color: #787887;
+}
+
+@media only screen and (min-width: 750px) {
+  .background #main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 1200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+  .background #main-container .left-side {
+    width: 45%;
+    justify-content: flex-start;
+  }
+  .background #main-container .left-side .mobile {
+    display: none;
+  }
+  .background #main-container .left-side .desktop {
+    display: flex;
+    flex-direction: column;
+  }
+  .background #main-container .left-side .desktop .images {
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+  }
+  .background #main-container .left-side .desktop .images .woman {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    right: 16%;
+  }
+  .background #main-container .left-side .desktop .images .desktop-shadow {
+    align-self: center;
+    position: relative;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    right: 15%;
+    width: 100%;
+  }
+  .background #main-container .left-side .desktop .box {
+    position: relative;
+    display: block;
+    justify-self: center;
+    width: 30%;
+    bottom: 50%;
+    left: -17%;
+    z-index: 4;
+  }
+  .background #main-container .right-side {
+    margin: auto;
+    width: 45%;
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+  .background #main-container .right-side .header {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 2em;
+  }
+  .background #main-container .right-side .header h2 {
+    font-weight: 700;
+    font-size: 3em;
+  }
+}
